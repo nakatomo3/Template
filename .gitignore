@@ -7,6 +7,17 @@
 *.o
 *.obj
 
+# VS‚Ìƒ†[ƒU[İ’è‚È‚Ç
+*.suo
+*.*.user
+*.opt
+*.clw
+*.ncb
+*.aps
+*.mak
+*.pdb
+.vs/
+
 # Precompiled Headers
 *.gch
 *.pch
