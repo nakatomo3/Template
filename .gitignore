@@ -1,4 +1,4 @@
-# Prerequisites
+ï»¿# Prerequisites
 *.d
 
 # Compiled Object files
@@ -7,7 +7,7 @@
 *.o
 *.obj
 
-# VS‚Ìƒ†[ƒU[İ’è‚È‚Ç
+# VSã®ãƒ¦ãƒ¼ã‚¶ãƒ¼è¨­å®šãªã©
 *.suo
 *.*.user
 *.opt
