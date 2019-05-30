@@ -20,7 +20,7 @@
 .vs/
 
 #ビルドで出力されるもの
-#[Dd]ebug/
+[Dd]ebug/
 [Rr]elease/
 x64/
 build/
