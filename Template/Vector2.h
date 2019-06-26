@@ -63,7 +63,7 @@ public:
 
 	//長さを返す関数
 	float Magnitude() {
-		return (float)sqrt(x * x + y * y);
+		return sqrt(x * x + y * y);
 	}
 
 	//単位ベクトルを返す関数
