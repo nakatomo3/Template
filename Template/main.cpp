@@ -17,6 +17,7 @@ int main(void) {
 }
 
 void Init(){
-	objectManager = ObjectManager();
-	saveManager = SaveManager();
+	SaveManager::GetInstance();
+	ObjectManager::GetInstance();
+	SceneManager::GetInstance();
 }

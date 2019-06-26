@@ -1,13 +1,15 @@
 #pragma once
 using namespace std;
 #include <list>
-#include "OriginalHeaders.h"
-class ObjectManager : public Singleton{
+#include "Singleton.h"
+class ObjectManager : public Singleton<ObjectManager> {
 public:
-	
+	friend class Singleton<ObjectManager>;
+
+private:
 
 	ObjectManager() {
-
+		printf("オブジェクトマネージャーが初期化されました");
 	}
 	~ObjectManager() {
 

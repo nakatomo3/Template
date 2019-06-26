@@ -5,11 +5,14 @@ using namespace std;
 #include<string>
 #include"Singleton.h"
 #include<list>
-class SaveManager : public Singleton{
-public:
+class SaveManager : public Singleton<SaveManager>{
+private:
 
 	SaveManager();
 	~SaveManager();
+
+public:
+	friend class Singleton<SaveManager>;
 
 	bool SaveAll(const char* fileName);
 	bool LoadAll(const char* fileName);
