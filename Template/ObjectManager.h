@@ -2,7 +2,7 @@
 using namespace std;
 #include <list>
 #include "OriginalHeaders.h"
-class ObjectManager {
+class ObjectManager : public Singleton{
 public:
 	
 
