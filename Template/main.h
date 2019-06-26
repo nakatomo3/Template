@@ -2,8 +2,7 @@
 #include <memory>
 #include "OriginalHeaders.h"
 
-ObjectManager manager;
+static ObjectManager objectManager;
+static SaveManager saveManager;
 
-void Init() {
-	manager = ObjectManager();
-}
+void Init();

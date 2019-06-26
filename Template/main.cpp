@@ -3,7 +3,7 @@
 
 int main(void) {
 
-	//Init();
+	Init();
 
 	Vector3 pos = Vector3(1, 2);
 	Vector3 posB = Vector3(5, 6);
@@ -14,4 +14,9 @@ int main(void) {
 
 	getchar();
 	return 0;
+}
+
+void Init(){
+	objectManager = ObjectManager();
+	saveManager = SaveManager();
 }

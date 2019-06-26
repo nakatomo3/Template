@@ -4,3 +4,5 @@
 #include"GameObject.h"
 #include"ObjectManager.h"
 #include"SceneManager.h"
+#include"Singleton.h"
+#include"SaveManager.h"
