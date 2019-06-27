@@ -13,37 +13,64 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ヘッダー ファイル\System">
+      <UniqueIdentifier>{764819fe-0243-45ad-956f-9526f5d9a876}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\System\Manager">
+      <UniqueIdentifier>{ddf2a13b-8081-4a90-a1ac-966fca0f76ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\System\CommonClass">
+      <UniqueIdentifier>{07f04726-0024-4e75-bdc5-ce090c8731ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\System\BaseClass">
+      <UniqueIdentifier>{9d06c276-a316-49d3-83df-ad4533de3111}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\System">
+      <UniqueIdentifier>{76adb2db-0e26-4419-b74c-5e8002ceb692}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\System\Manager">
+      <UniqueIdentifier>{6116ac8e-cce2-4094-8602-1323b4426314}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\System\CommonClass">
+      <UniqueIdentifier>{ddd579eb-499b-43c5-8862-17f089e9b7eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\System\BaseClass">
+      <UniqueIdentifier>{e8169824-e6dc-434c-95f3-c6ad8bd5781d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Vector3.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="OriginalHeaders.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjectManager.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Cube.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="main.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneManager.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>ヘッダー ファイル\System\Manager</Filter>
     </ClInclude>
     <ClInclude Include="SaveManager.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\System\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>ヘッダー ファイル\System\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>ヘッダー ファイル\System\CommonClass</Filter>
+    </ClInclude>
+    <ClInclude Include="LogWriter.h">
+      <Filter>ヘッダー ファイル\System\Manager</Filter>
     </ClInclude>
     <ClInclude Include="Singleton.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\System\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="Cube.h">
+      <Filter>ヘッダー ファイル\System\CommonClass</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>ヘッダー ファイル\System\CommonClass</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3.h">
+      <Filter>ヘッダー ファイル\System\CommonClass</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -51,13 +78,16 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Cube.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\System\CommonClass</Filter>
+    </ClCompile>
+    <ClCompile Include="LogWriter.cpp">
+      <Filter>ソース ファイル\System\Manager</Filter>
     </ClCompile>
     <ClCompile Include="SaveManager.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\System\Manager</Filter>
     </ClCompile>
     <ClCompile Include="SceneManager.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\System\Manager</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

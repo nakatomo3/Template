@@ -6,3 +6,4 @@
 #include"SceneManager.h"
 #include"Singleton.h"
 #include"SaveManager.h"
+#include"LogWriter.h"
