@@ -1,15 +1,15 @@
-#include<stdio.h>
-#include"main.h"
+#include "main.h"
 
 int main(void) {
 
 	Init();
 
-	Vector3 pos = Vector3(1, 2);
-	Vector3 posB = Vector3(5, 6);
-	Vector3 posC = pos.UnitVector();
-
-	//printf("%f", pos.x);
+	while (true){
+		if(Time::GetInstance().IsUpdate()){
+			Update();
+			Draw();
+		}
+	}
 
 
 	getchar();
@@ -20,4 +20,14 @@ void Init(){
 	SaveManager::GetInstance();
 	ObjectManager::GetInstance();
 	SceneManager::GetInstance();
+	LogWriter::GetInstance();
+	Time::GetInstance();
+}
+
+void Update() {
+	
+}
+
+void Draw() {
+
 }

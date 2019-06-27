@@ -7,3 +7,4 @@
 #include"Singleton.h"
 #include"SaveManager.h"
 #include"LogWriter.h"
+#include "Time.h"
