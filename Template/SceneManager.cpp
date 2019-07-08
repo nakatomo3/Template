@@ -1,9 +1,10 @@
 #include "SceneManager.h"
-
-SceneManager::~SceneManager() {
-	printf("シーンマネージャーが初期化されました");
-}
+#include "LogWriter.h"
 
 SceneManager::SceneManager() {
+	LogWriter::GetInstance().Log("シーンマネージャーが初期化されました\n");
+}
+
+SceneManager::~SceneManager() {
 
 }

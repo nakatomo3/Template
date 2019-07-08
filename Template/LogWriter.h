@@ -6,9 +6,9 @@ class LogWriter : public Singleton<LogWriter> {
 public:
 	friend class Singleton<LogWriter>;
 
-	void Log(const char*, ...);
-	void LogWorning(const char* format, ...);
-	void LogError(const char * format, ...);
+	static void Log(const char*, ...);
+	static void LogWorning(const char* format, ...);
+	static void LogError(const char * format, ...);
 
 private:
 	LogWriter();

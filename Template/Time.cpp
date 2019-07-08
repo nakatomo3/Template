@@ -1,5 +1,6 @@
 #include "Time.h"
 #include <timeapi.h>
+#include "LogWriter.h"
 #pragma comment(lib, "winmm.lib")
 #define DEFAULT_FPS (30.0)
 double clockPerSecond;
@@ -12,7 +13,7 @@ Time::Time() {
 	clocksPerSecond = (double)Freq.QuadPart;
 	QueryPerformanceCounter(&m_Counter);
 	beforeFrameClock = m_Counter.QuadPart;
-	printf("Timeが初期化されました");
+	LogWriter::GetInstance().Log("Timeが初期化されました");
 }
 
 
@@ -28,6 +29,10 @@ double Time::GetDeltaTime() {
 	return deltaTime;
 }
 
+int Time::GetFrameFromStart() {
+	return frameCount;
+}
+
 bool Time::IsUpdate() {
 	QueryPerformanceCounter(&m_Counter);                     // 現在の時刻を取得し、
 	LONGLONG LongDef = m_Counter.QuadPart - beforeFrameClock;    // 差分カウント数を算出する。
@@ -41,10 +46,20 @@ bool Time::IsUpdate() {
 	}
 	deltaTime = interval;
 	interval = 0;
+
+	frameCount++;
+
 	return true;
 }
 
-void Time::ChangeTimeSpeed(float speed) {
-
+void Time::SetTimeSpeed(float speed) {
+	if (speed < 0) {
+		LogWriter::GetInstance().LogError("ChangeTimeSpeedで%fを設定しました。マイナスの数字は入力しないでください",speed);
+		return;
+	}
+	timeSpeed = speed;
 }
 
+float Time::GetTimeSpeed() {
+	return timeSpeed;
+}
