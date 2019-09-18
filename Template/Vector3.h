@@ -1,8 +1,6 @@
 #pragma once
-#include "OriginalHeaders.h"
 class Vector3 {
 public:
-	float x, y, z;
 
 	//x,y,z¬•ª‚ğ0‚É‚·‚é‰Šú‰»
 	Vector3() {
@@ -82,10 +80,26 @@ public:
 		return Vector3(x / Magnitude(), y / Magnitude(), z / Magnitude());
 	}
 
-	
+	void Set(float _x, float _y, float _z) {
+		x = _x;
+		y = _y;
+		z = _z;
+	}
+
+	float GetX() {
+		return x;
+	}
+
+	float GetY() {
+		return y;
+	}
+
+	float GetZ() {
+		return z;
+	}
 
 private:
-
+	float x, y, z;
 };
 
 

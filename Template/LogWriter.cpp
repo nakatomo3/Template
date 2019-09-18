@@ -4,12 +4,12 @@
 #include <time.h>
 #include <direct.h>
 #include <Windows.h>
+#include "Setting.h"
 
 #define FOLDER_NAME_LENGTH (15)
 #define FILE_NAME_LENGTH (13)
 #define PATH_LENGTH (FOLDER_NAME_LENGTH + FILE_NAME_LENGTH)
 
-#define IS_CREATE_FILE true
 
 FILE* file;
 char path[PATH_LENGTH];
