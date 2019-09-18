@@ -2,7 +2,7 @@
 #include <timeapi.h>
 #include "LogWriter.h"
 #pragma comment(lib, "winmm.lib")
-#define DEFAULT_FPS (30.0)
+#include "Setting.h"
 double clockPerSecond;
 
 Time::Time() {
@@ -31,6 +31,10 @@ double Time::GetDeltaTime() {
 
 int Time::GetFrameFromStart() {
 	return frameCount;
+}
+
+float Time::GetTimeFromStart() {
+	return 0.0f;
 }
 
 bool Time::IsUpdate() {

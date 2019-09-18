@@ -3,7 +3,6 @@
 #include <Windows.h>
 #include <mmsystem.h>
 #include <time.h>
-#define DEFAULT_FPS (30.0)
 
 class Time : public Singleton<Time> {
 public:
