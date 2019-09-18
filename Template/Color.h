@@ -6,8 +6,8 @@ public:
 
 	Color(unsigned int R, unsigned int G, unsigned int B);
 	Color(unsigned int R, unsigned int G, unsigned int B, unsigned int A);
-	Color(float R, float G, float B);
-	Color(float R, float G, float B, float A);
+
+	Color Nega();
 
 	Color operator+(Color color) {
 		int newR = r + color.r;
