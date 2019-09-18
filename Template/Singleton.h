@@ -1,16 +1,19 @@
 #pragma once
 #include<string>
 #include <map>
-class Singleton {
+
+template<class T> class Singleton {
 public:
-	static Singleton *GetInstance() {
-		return s_pInstance;
+	static inline T& GetInstance() {
+		static T instance;
+		return instance;
 	}
 
-	static bool Create();
-	static bool Destroy();
-
 protected:
-	static Singleton *s_pInstance;
-	Singleton(); // 隠しコンストラクタ
+	Singleton() {} // 外部でのインスタンス作成は禁止
+	virtual ~Singleton() {}
+
+private:
+	void operator=(const Singleton& obj) {} // 代入演算子禁止
+	Singleton(const Singleton &obj) {} // コピーコンストラクタ禁止
 };

@@ -1,8 +1,8 @@
-#pragma once
-#include "OriginalHeaders.h"
-class Cube : public GameObject {
-public:
-	Cube();
-	~Cube();
-};
-
+//#pragma once
+//#include "OriginalHeaders.h"
+//class Cube : public GameObject {
+//public:
+//	Cube();
+//	~Cube();
+//};
+//

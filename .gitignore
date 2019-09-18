@@ -85,3 +85,6 @@ ipch/
 *.exe
 *.out
 *.app
+
+#自動で生成されるログファイル
+Template/Logs

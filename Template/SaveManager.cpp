@@ -1,15 +1,5 @@
 #include "SaveManager.h"
-
-static const int NAME_LEN_MAX;
-
-map<string, int>    intSaves;
-map<int, string>    intKeys;
-
-map<string, float>  floatSaves;
-map<int,string>     floatKeys;
-
-map<string, string> stringSaves;
-map<int,string>     stringKeys;
+#include "LogWriter.h"
 
 enum CLASS_ID {
 	INT = 0,
@@ -19,7 +9,7 @@ enum CLASS_ID {
 };
 
 SaveManager::SaveManager() {
-	printf("セーブマネージャーが初期化されました\n");
+	LogWriter::GetInstance().Log("セーブマネージャーが正常に初期化されました\n");
 }
 
 SaveManager::~SaveManager() {
@@ -31,7 +21,7 @@ bool SaveManager::SaveAll(const char* fileName) {
 	bool isSuccess = true;
 	FILE* file = fopen(fileName, "wb");
 	if (file == NULL) {
-		printf("ファイルが見つかりませんでしたので、新規作成しました\n");
+		LogWriter::GetInstance().LogWorning("ファイルが見つかりませんでしたので、新規作成しました\n");
 		file = fopen(fileName, "w");
 		file = fopen(fileName, "wb");
 	}
@@ -65,7 +55,7 @@ bool SaveManager::SaveAll(const char* fileName) {
 	
 
 	if (isSuccess == true) {
-		printf("セーブが正常に完了しました\n");
+		LogWriter::GetInstance().Log("セーブが正常に完了しました\n");
 	}
 
 	fclose(file);
@@ -77,7 +67,7 @@ bool SaveManager::LoadAll(const char* fileName) {
 
 	FILE* file = fopen(fileName, "rb");
 	if (file == NULL) {
-		printf("ファイルが見つかりませんでしたので、新規作成しました\n");
+		LogWriter::GetInstance().LogWorning("ファイルが見つかりませんでしたので、新規作成しました\n");
 		file = fopen(fileName, "w");
 		file = fopen(fileName, "rb");
 		return false;
@@ -92,7 +82,7 @@ bool SaveManager::LoadAll(const char* fileName) {
 		string name;
 		switch (classID) {
 			default:
-				printf("CLASS_IDを登録してください\n");
+				LogWriter::GetInstance().LogError("CLASS_IDを登録してください\n");
 				isSuccess = false;
 				break;
 			case INT:
@@ -125,19 +115,13 @@ bool SaveManager::LoadAll(const char* fileName) {
 
 
 	if (isSuccess == true) {
-		printf("ロードが正常に完了しました\n");
+		LogWriter::GetInstance().Log("ロードが正常に完了しました\n");
 	} else {
-		printf("ロードが正常に完了しませんでした\n");
+		LogWriter::GetInstance().LogWorning("ロードが正常に完了しませんでした\n");
 	}
 	fclose(file);
 	return isSuccess;
 }
-
-template <class T>
-void SaveManager::Save(char* fileName, T instance, string key) {
-
-}
-
 
 void SaveManager::AddInt(string key, int value) {
 	if (intSaves[key] == NULL) {
