@@ -37,10 +37,29 @@ public:
 		return Vector3(x - vector.x, y - vector.y, z - vector.z);
 	};
 
+	//ä|ÇØéZ
+	Vector3 operator* (float value) {
+		return Vector3(x * value, y * value, z * value);
+	};
+	Vector3 operator* (int value) {
+		return Vector3(x * value, y * value, z * value);
+	};
+
+
+	//äÑÇËéZ
+	Vector3 operator/ (float value) {
+		return Vector3(x / value, y / value, z / value);
+	};
+	Vector3 operator/ (int value) {
+		return Vector3(x / value, y / value, z / value);
+	};
+
 	//ì‡êœ
 	float operator*(Vector3 vector) {
 		return x * vector.x + y * vector.y + z * vector.z;
 	}
+
+
 
 	//äOêœ
 	Vector3 operator^(Vector3 vector) {
@@ -49,10 +68,6 @@ public:
 			z*vector.x - x * vector.z,
 			x*vector.y - y * vector.x
 		);
-	}
-
-	Vector3 operator/(float num) {
-		return Vector3(x / num, y / num, z / num);
 	}
 
 	bool operator==(Vector3 vector) {

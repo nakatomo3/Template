@@ -13,4 +13,6 @@ public:
 	virtual void Start();
 
 	virtual void Load();
+
+	virtual void UnLoad();
 };

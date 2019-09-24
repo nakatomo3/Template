@@ -108,7 +108,7 @@ void NonComponentGameObject::AddChild(NonComponentGameObject * child) {
 
 void NonComponentGameObject::Rotate(Vector3 angle) {
 	for (int i = 0; i < GetChildCount(); i++) {
-
+		GetChild(i)->Rotate(angle * -1);
 	}
 }
 

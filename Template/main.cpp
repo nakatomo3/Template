@@ -15,13 +15,13 @@
 #include"ScriptBase.h"
 #include"GameObject.h"
 
+
 int main(void) {
 	Init();
 
 	while (true){
 		if(Time::GetInstance().IsUpdate()){
 			Update();
-			Draw();
 		}
 	}
 
@@ -29,10 +29,10 @@ int main(void) {
 }
 
 void Init(){
+	LogWriter::GetInstance();
 	SaveManager::GetInstance();
 	ObjectManager::GetInstance();
 	SceneManager::GetInstance();
-	LogWriter::GetInstance();
 	
 	GameObject* obj = new GameObject();
 	ObjectManager::GetInstance().Instantiate(obj);
@@ -51,11 +51,12 @@ void Uninit() {
 }
 
 void Update() {
+	//ˆ—ŠÖŒW
 	ObjectManager::GetInstance().FirstUpdate();
 	ObjectManager::GetInstance().Update();
 	ObjectManager::GetInstance().LateUpdate();
-}
 
-void Draw() {
-
+	//•`‰æŠÖŒW
+	ObjectManager::GetInstance().Draw();
+	ObjectManager::GetInstance().LateDraw();
 }

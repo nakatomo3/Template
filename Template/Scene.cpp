@@ -17,3 +17,6 @@ void Scene::Start() {
 void Scene::Load() {
 
 }
+
+void Scene::UnLoad() {
+}

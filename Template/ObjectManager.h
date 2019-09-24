@@ -17,6 +17,9 @@ public:
 	void Update();
 	void LateUpdate();
 
+	void Draw();
+	void LateDraw();
+
 
 private:
 

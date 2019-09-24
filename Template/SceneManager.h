@@ -18,6 +18,8 @@ public :
 	void BackLoad(string name);
 	void BackLoad(unsigned int num);
 
+	void UnLoad(Scene* scene);
+
 	Scene* GetScene(unsigned int num);
 	Scene* GetScene(string name);
 

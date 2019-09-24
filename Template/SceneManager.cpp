@@ -62,6 +62,10 @@ void SceneManager::BackLoad(unsigned int num) {
 	sceneList[num]->Load();
 }
 
+void SceneManager::UnLoad(Scene* scene) {
+	scene->UnLoad();
+}
+
 Scene* SceneManager::GetScene(unsigned int num) {
 	if (sceneList.size() < num) {
 		LogWriter::GetInstance().LogWorning("%d番目のシーンは存在しませんでした。シーン数は%dです", num, sceneList.size());
