@@ -7,7 +7,10 @@
 
 class GameObject : public NonComponentGameObject {
 public:
+
 	GameObject();
+
+	//ŒÄ‚Ño‚µ‚Í”ñ„§(ObjectManager‚ÌDestroy‚ğg—p„§)
 	~GameObject();
 
 	template<typename T>

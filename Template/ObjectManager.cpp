@@ -7,6 +7,15 @@ void ObjectManager::Instantiate(GameObject* instance) {
 	objects.emplace_back(instance);
 }
 
+void ObjectManager::Destroy(GameObject * instance) {
+	auto itr = find(objects.begin(), objects.end(), instance);
+	if (itr != objects.end()) {
+		int num = distance(objects.begin(), itr);
+		GameObject* destroyObj = objects[num];
+		objects.erase(itr);
+	}
+}
+
 void ObjectManager::Awake() {
 	for (unsigned int i = 0; i < objects.size(); i++) {
 		for (unsigned int j = 0; j < objects[i]->GetComponentCount(); j++) {
